@@ -86,7 +86,7 @@ export default function Contact() {
             </div>
 
             {/* Background Pattern */}
-            <div className="absolute inset-0 bg-[url('/images/PATTERNSEMFUNDO.png')] opacity-10 bg-repeat mix-blend-overlay" />
+            <div className="absolute inset-0 bg-[url('/images/PATTERNSEMFUNDO.webp')] opacity-10 bg-repeat mix-blend-overlay" />
             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-secondary/30 rounded-full blur-3xl" />
           </div>
 

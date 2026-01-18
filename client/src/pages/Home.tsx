@@ -14,17 +14,17 @@ export default function Home() {
 
   const heroSlides = [
     {
-      image: "/images/banner-pain-relief-gen.jpg",
+      image: "/images/banner-pain-relief-gen.webp",
       title: "Dor e Inflamação",
       subtitle: "Tratamento especializado para alívio da dor e recuperação funcional em Alphaville, Barueri e região."
     },
     {
-      image: "/images/treatment-harmonization-user.png",
+      image: "/images/treatment-harmonization-user.webp",
       title: "Harmonização Corporal",
       subtitle: "Estratégias para melhora do contorno e qualidade do tecido, com foco em naturalidade e proporção."
     },
     {
-      image: "/images/treatment-lipedema-user.png",
+      image: "/images/treatment-lipedema-user.webp",
       title: "Tratamento de Lipedema",
       subtitle: "Cuidado especializado com manejo do tecido, controle de inflamação e orientação consciente."
     }
@@ -111,6 +111,7 @@ export default function Home() {
             <button
               key={idx}
               onClick={() => setCurrentSlide(idx)}
+              aria-label={`Ir para o slide ${idx + 1}`}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 currentSlide === idx ? "bg-white w-8" : "bg-white/50 hover:bg-white/80"
               }`}
@@ -118,10 +119,10 @@ export default function Home() {
           ))}
         </div>
         
-        <button onClick={prevSlide} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/50 hover:text-white transition-colors hidden md:block">
+        <button onClick={prevSlide} aria-label="Slide anterior" className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/50 hover:text-white transition-colors hidden md:block">
           <ChevronLeft size={48} />
         </button>
-        <button onClick={nextSlide} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/50 hover:text-white transition-colors hidden md:block">
+        <button onClick={nextSlide} aria-label="Próximo slide" className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/50 hover:text-white transition-colors hidden md:block">
           <ChevronRight size={48} />
         </button>
       </section>
@@ -184,32 +185,32 @@ export default function Home() {
               { 
                 title: "Dor e Inflamação", 
                 desc: "Tratamento direcionado à origem do problema, respeitando limites e devolvendo funcionalidade e conforto.", 
-                img: "/images/banner-pain-relief-gen.jpg" 
+                img: "/images/banner-pain-relief-gen.webp" 
               },
               { 
                 title: "Lipedema", 
                 desc: "Cuidado especializado com manejo do tecido, controle de inflamação e orientação consciente.", 
-                img: "/images/treatment-lipedema-user.png" 
+                img: "/images/treatment-lipedema-user.webp" 
               },
               { 
                 title: "Harmonização Corporal", 
                 desc: "Estratégias para melhora do contorno e qualidade do tecido, com foco em naturalidade e proporção.", 
-                img: "/images/treatment-harmonization-user.png" 
+                img: "/images/treatment-harmonization-user.webp" 
               },
               { 
                 title: "Pós-Operatórios", 
                 desc: "Acompanhamento especializado para uma recuperação segura, funcional e com menos intercorrências.", 
-                img: "/images/treatment-post-op-gen.jpg" 
+                img: "/images/treatment-post-op-gen.webp" 
               },
               { 
                 title: "Massagem Terapêutica", 
                 desc: "Alívio de tensões, reorganização corporal e sensação real de bem-estar.", 
-                img: "/images/treatment-massage-gen.jpg" 
+                img: "/images/treatment-massage-gen.webp" 
               },
               { 
                 title: "Flacidez", 
                 desc: "Tratamento de alterações de tecido com foco na saúde e função da pele.", 
-                img: "/images/treatment-flaccidity-gen.jpg" 
+                img: "/images/treatment-flaccidity-gen.webp" 
               }
             ].map((item, idx) => (
               <Link key={idx} href="/tratamentos" className="group relative aspect-[4/5] overflow-hidden rounded-xl block cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
@@ -235,7 +236,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/90 z-0">
-          <div className="absolute inset-0 bg-[url('/images/PATTERNSEMFUNDO.png')] opacity-10 bg-repeat mix-blend-overlay" />
+          <div className="absolute inset-0 bg-[url('/images/PATTERNSEMFUNDO.webp')] opacity-10 bg-repeat mix-blend-overlay" />
         </div>
         
         <div className="container relative z-10 text-center text-white">

@@ -35,12 +35,12 @@ export default function About() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/flavia-profile-new.png" 
+                  src="/images/flavia-profile-new.webp" 
                   alt="Dra. Flávia Abreu" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[url('/images/SUBMARCASEMFUNDO.png')] bg-contain bg-no-repeat opacity-20 rotate-12" />
+              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[url('/images/SUBMARCASEMFUNDO.webp')] bg-contain bg-no-repeat opacity-20 rotate-12" />
             </div>
           </motion.div>
 

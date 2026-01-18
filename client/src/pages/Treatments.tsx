@@ -11,63 +11,63 @@ export default function Treatments() {
       icon: Sparkles,
       desc: "Um conjunto de técnicas que equilibram e valorizam seu corpo. Reduz medidas, define contornos, melhora a pele. Resultados naturais, sem parecer 'feito'. Combinamos tecnologias avançadas com terapias manuais especializadas.",
       target: "Quem quer melhorar a silhueta, reduzir inchaços, definir formas com naturalidade.",
-      image: "/images/treatment-harmonization-user.png"
+      image: "/images/treatment-harmonization-user.webp"
     },
     {
       title: "Lipedema",
       icon: Activity,
       desc: "O lipedema causa dor, inchaço e desconforto. Técnicas exclusivas que aliviam dor, reduzem inchaço e melhoram a aparência. O foco é sua funcionalidade e bem-estar, não só a estética.",
       target: "Mulheres com diagnóstico ou suspeita de lipedema que buscam alívio e controle.",
-      image: "/images/treatment-lipedema-user.png"
+      image: "/images/treatment-lipedema-user.webp"
     },
     {
       title: "Diástase Abdominal",
       icon: HeartPulse,
       desc: "Diástase deixa o abdômen fraco e inchado, mas pode ser recuperado de verdade. Exercícios específicos, tecnologias avançadas e terapias manuais trabalham juntos para recuperar a função e a aparência.",
       target: "Mulheres no pós-parto ou qualquer pessoa com separação dos músculos abdominais.",
-      image: "/images/treatment-diastasis-user.png"
+      image: "/images/treatment-diastasis-user.webp"
     },
     {
       title: "Celulite",
       icon: Waves,
       desc: "Celulite é comum, mas tratável. Combinamos tecnologias que estimulam circulação com terapias que fortalecem os tecidos. A textura melhora, a pele fica mais firme e uniforme.",
       target: "Quem quer reduzir a aparência de celulite e ter uma pele mais uniforme.",
-      image: "/images/treatment-cellulite-user.png"
+      image: "/images/treatment-cellulite-user.webp"
     },
     {
       title: "Estrias",
       icon: Droplets,
       desc: "Estrias deixam marcas, mas podem ser significativamente reduzidas. Estimulamos a regeneração da pele com tecnologias que aumentam colágeno. A pele fica mais uniforme, hidratada e revitalizada.",
       target: "Quem tem estrias e quer melhorar a textura e aparência da pele.",
-      image: "/images/treatment-stretch-marks-user.png"
+      image: "/images/treatment-stretch-marks-user.webp"
     },
     {
       title: "Flacidez",
       icon: Zap,
       desc: "Hoje existem recursos que realmente transformam pele flácida em pele firme e jovem. Várias tecnologias trabalham para estimular colágeno e melhorar hidratação.",
       target: "Quem quer recuperar firmeza, elasticidade e aquele aspecto mais jovem.",
-      image: "/images/treatment-flaccidity-gen.jpg"
+      image: "/images/treatment-flaccidity-gen.webp"
     },
     {
       title: "Massagem Terapêutica",
       icon: Heart,
       desc: "Massagem que alivia dores, reduz tensões, melhora circulação e promove relaxamento profundo. Uma abordagem personalizada que restaura o equilíbrio do seu corpo.",
       target: "Quem carrega estresse no corpo, tem dores musculares ou simplesmente precisa se cuidar.",
-      image: "/images/treatment-massage-gen.jpg"
+      image: "/images/treatment-massage-gen.webp"
     },
     {
       title: "Pós-Operatórios",
       icon: ShieldCheck,
       desc: "Acompanhamento especializado para garantir uma recuperação segura, funcional e com menos intercorrências. O cuidado no pós-operatório é essencial para o resultado final.",
       target: "Quem vai passar ou passou por cirurgias plásticas ou vasculares e precisa de reabilitação adequada.",
-      image: "/images/treatment-post-op-gen.jpg"
+      image: "/images/treatment-post-op-gen.webp"
     },
     {
       title: "Dor e Inflamação",
       icon: Flame,
       desc: "Tratamento focado no alívio da dor crônica ou aguda e redução de processos inflamatórios. Utilizamos recursos terapêuticos manuais e tecnológicos para devolver sua qualidade de vida e movimento sem dor.",
       target: "Pessoas com dores crônicas, lesões musculares, tendinites ou processos inflamatórios persistentes.",
-      image: "/images/banner-pain-relief-gen.jpg"
+      image: "/images/banner-pain-relief-gen.webp"
     }
   ];
 

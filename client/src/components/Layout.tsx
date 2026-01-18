@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
             <img 
-              src="/images/SUBMARCASEMFUNDO.png" 
+              src="/images/SUBMARCASEMFUNDO.webp" 
               alt="Flávia Abreu Logo" 
               className={cn(
                 "transition-all duration-500",
@@ -93,6 +93,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <button 
             className="md:hidden text-foreground p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Menu Principal"
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
           </button>
@@ -138,7 +139,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             <div className="flex flex-col items-center md:items-start gap-6">
-              <img src="/images/LOGOSECUNDARIOSEMFUNDO.png" alt="Dra. Flávia Abreu" className="h-24 w-auto mb-6 opacity-90" />
+              <img src="/images/LOGOSECUNDARIOSEMFUNDO.webp" alt="Dra. Flávia Abreu" className="h-24 w-auto mb-6 opacity-90" />
               <p className="text-muted-foreground text-center md:text-left max-w-xs leading-relaxed">
                 Cuidado corporal com critério, presença e responsabilidade. Transformando vidas através da saúde estética integrativa.
               </p>
@@ -147,13 +148,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="flex flex-col items-center md:items-start gap-6">
               <h3 className="font-serif text-xl text-primary">Contato</h3>
               <div className="flex flex-col gap-4 text-muted-foreground text-center md:text-left">
-                <a href="https://wa.me/5511993905711" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2 justify-center md:justify-start">
+                <a href="https://wa.me/5511993905711" target="_blank" aria-label="WhatsApp" className="hover:text-primary transition-colors flex items-center gap-2 justify-center md:justify-start">
                   <Phone size={18} /> (11) 99390-5711
                 </a>
-                <a href="https://instagram.com/draflaviaabreu" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2 justify-center md:justify-start">
+                <a href="https://instagram.com/draflaviaabreu" target="_blank" aria-label="Instagram" className="hover:text-primary transition-colors flex items-center gap-2 justify-center md:justify-start">
                   <Instagram size={18} /> @draflaviaabreu
                 </a>
-                <a href="mailto:contato@draflaviaabreu.com" className="hover:text-primary transition-colors flex items-center gap-2 justify-center md:justify-start">
+                <a href="mailto:contato@draflaviaabreu.com" aria-label="Email" className="hover:text-primary transition-colors flex items-center gap-2 justify-center md:justify-start">
                   <Mail size={18} /> contato@draflaviaabreu.com
                 </a>
                 <p>Aldeia da Serra, Alphaville e Região</p>
