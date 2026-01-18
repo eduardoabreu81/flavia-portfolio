@@ -177,7 +177,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           
           <div className="border-t border-primary/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground/60 uppercase tracking-wider">
             <p>&copy; {new Date().getFullYear()} Dra. Flávia Abreu. Todos os direitos reservados.</p>
-            <p>Design by Manus</p>
+            <p>Design by Localbiz Academy</p>
           </div>
         </div>
       </footer>
