@@ -2,12 +2,12 @@ import { Instagram } from "lucide-react";
 
 export default function InstagramFeed() {
   const images = [
-    { src: "/images/treatment-harmonization-user.png", alt: "Harmonização Corporal" },
-    { src: "/images/banner-pain-relief-gen.jpg", alt: "Alívio da Dor" },
-    { src: "/images/treatment-lipedema-user.png", alt: "Tratamento de Lipedema" },
-    { src: "/images/treatment-massage-gen.jpg", alt: "Massagem Terapêutica" },
-    { src: "/images/treatment-post-op-gen.jpg", alt: "Pós-Operatório" },
-    { src: "/images/treatment-flaccidity-gen.jpg", alt: "Tratamento de Flacidez" },
+    { src: "/images/treatment-harmonization-user.webp", alt: "Harmonização Corporal" },
+    { src: "/images/banner-pain-relief-gen.webp", alt: "Alívio da Dor" },
+    { src: "/images/treatment-lipedema-user.webp", alt: "Tratamento de Lipedema" },
+    { src: "/images/treatment-massage-gen.webp", alt: "Massagem Terapêutica" },
+    { src: "/images/treatment-post-op-gen.webp", alt: "Pós-Operatório" },
+    { src: "/images/treatment-flaccidity-gen.webp", alt: "Tratamento de Flacidez" },
   ];
 
   return (
