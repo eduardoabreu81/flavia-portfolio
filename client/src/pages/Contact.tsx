@@ -1,14 +1,17 @@
+import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Instagram, MapPin, Clock, Mail } from "lucide-react";
+import { Phone, Instagram, MapPin, Clock, Mail, CheckCircle2, MessageCircle, ArrowLeft } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { SEO } from "@/components/SEO";
 import { saveContactMessage } from "@/lib/firebase";
 
 export default function Contact() {
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState<any>(null);
 
   const onSubmit = async (data: any) => {
     try {
@@ -16,19 +19,102 @@ export default function Contact() {
       await saveContactMessage(data);
       
       console.log("Mensagem salva no Firebase:", data);
-      toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-      reset();
-      
-      // Construct WhatsApp message
-      const message = `Olá, meu nome é ${data.name}. Gostaria de mais informações sobre os tratamentos. Mensagem: ${data.message}`;
-      const whatsappUrl = `https://wa.me/5511993905711?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
+      setFormData(data);
+      setSubmitted(true);
+      toast.success("Mensagem enviada com sucesso!");
     } catch (error) {
       console.error("Erro ao enviar mensagem:", error);
       toast.error("Ops! Algo deu errado. Tente novamente.");
     }
   };
 
+  const handleWhatsApp = () => {
+    const message = `Olá, meu nome é ${formData.name}. Gostaria de mais informações sobre os tratamentos. Mensagem: ${formData.message}`;
+    const whatsappUrl = `https://wa.me/5511993905711?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleBackToSite = () => {
+    setSubmitted(false);
+    setFormData(null);
+    reset();
+    window.location.href = '/';
+  };
+
+  // Tela de Sucesso
+  if (submitted) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-cream-50 to-terracotta-50 px-4">
+        <SEO 
+          title="Mensagem Enviada"
+          description="Sua mensagem foi enviada com sucesso!"
+          canonical="/contato"
+        />
+        <div className="max-w-2xl w-full bg-white rounded-3xl shadow-2xl p-12 text-center">
+          {/* Ícone de Sucesso */}
+          <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle2 className="w-12 h-12 text-green-600" />
+          </div>
+
+          {/* Título */}
+          <h1 className="font-serif text-4xl text-gray-900 mb-4">
+            Mensagem Enviada!
+          </h1>
+          <p className="font-sans text-lg text-gray-600 mb-8">
+            Recebi sua mensagem e entrarei em contato em breve.
+          </p>
+
+          {/* Divider */}
+          <div className="border-t border-gray-200 my-8"></div>
+
+          {/* Opção WhatsApp */}
+          <p className="font-sans text-base text-gray-700 mb-6">
+            Quer conversar agora pelo WhatsApp?
+          </p>
+
+          {/* Botões */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              onClick={handleWhatsApp}
+              size="lg"
+              className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-2"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Enviar também pelo WhatsApp
+            </Button>
+            <Button
+              onClick={handleBackToSite}
+              size="lg"
+              variant="outline"
+              className="border-gray-300 text-gray-700 hover:bg-gray-50 flex items-center gap-2"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              Voltar ao Site
+            </Button>
+          </div>
+
+          {/* Informações de Contato */}
+          <div className="mt-12 pt-8 border-t border-gray-200">
+            <p className="font-sans text-sm text-gray-500 mb-4">
+              Outras formas de contato:
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-600">
+              <a href="https://wa.me/5511993905711" target="_blank" className="hover:text-terracotta-600 transition-colors flex items-center gap-2 justify-center">
+                <Phone className="w-4 h-4" />
+                (11) 99390-5711
+              </a>
+              <a href="https://instagram.com/draflaviaabreu" target="_blank" className="hover:text-terracotta-600 transition-colors flex items-center gap-2 justify-center">
+                <Instagram className="w-4 h-4" />
+                @draflaviaabreu
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Formulário de Contato
   return (
     <div className="pt-32 pb-20 bg-[#F9F7F2]">
       <SEO 
@@ -108,20 +194,22 @@ export default function Contact() {
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label className="text-sm font-medium text-foreground/80">Nome</label>
+                  <label className="text-sm font-medium text-foreground/80">Nome *</label>
                   <Input 
-                    {...register("name", { required: true })} 
+                    {...register("name", { required: "Nome é obrigatório" })} 
                     placeholder="Seu nome completo" 
                     className="bg-background border-input focus:border-primary transition-colors"
                   />
+                  {errors.name && <span className="text-red-500 text-xs">{errors.name.message as string}</span>}
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="text-sm font-medium text-foreground/80">Telefone</label>
+                  <label className="text-sm font-medium text-foreground/80">Telefone *</label>
                   <Input 
-                    {...register("phone", { required: true })} 
+                    {...register("phone", { required: "Telefone é obrigatório" })} 
                     placeholder="(11) 99999-9999" 
                     className="bg-background border-input focus:border-primary transition-colors"
                   />
+                  {errors.phone && <span className="text-red-500 text-xs">{errors.phone.message as string}</span>}
                 </div>
               </div>
 
@@ -136,12 +224,13 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium text-foreground/80">Como posso ajudar?</label>
+                <label className="text-sm font-medium text-foreground/80">Como posso ajudar? *</label>
                 <Textarea 
-                  {...register("message", { required: true })} 
+                  {...register("message", { required: "Mensagem é obrigatória" })} 
                   placeholder="Conte um pouco sobre o que você busca..." 
                   className="min-h-[150px] bg-background border-input focus:border-primary transition-colors resize-none"
                 />
+                {errors.message && <span className="text-red-500 text-xs">{errors.message.message as string}</span>}
               </div>
 
               <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-white mt-4">
