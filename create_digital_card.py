@@ -210,7 +210,7 @@ def create_page_1_menu(c, use_custom_fonts=True):
     ]
     
     start_y = line_y - 200
-    font_button = 'Montserrat' if use_custom_fonts else 'Helvetica'
+    font_button = 'Montserrat-Black' if use_custom_fonts else 'Helvetica-Bold'
     
     for i, btn in enumerate(buttons):
         y = start_y - (i * button_spacing)
