@@ -67,7 +67,7 @@ export default function Ebook() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/ebook-hero.jpg" 
+            src="/images/ebook-hero.webp" 
             alt="Mulher em momento de reflexão" 
             className="w-full h-full object-cover"
           />
@@ -134,83 +134,94 @@ export default function Ebook() {
       </section>
 
       {/* O que você vai aprender */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white relative overflow-hidden">
+        {/* Background de mármore sutil */}
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: 'url(/images/marble-background.webp)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        <div className="relative z-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-4xl md:text-5xl text-gray-900 text-center mb-16">
             O que você vai aprender neste eBook gratuito
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-cream-50 p-8 rounded-2xl">
-              <div className="w-12 h-12 bg-terracotta-100 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-terracotta-200/30 shadow-lg">
+              <img 
+                src="/images/icon-fa.webp" 
+                alt="" 
+                className="w-16 h-16 mb-4 opacity-90"
+              />
               <h3 className="font-serif text-xl text-gray-900 mb-3">
                 Por que dor e inchaço não surgem do nada
               </h3>
             </div>
 
-            <div className="bg-cream-50 p-8 rounded-2xl">
-              <div className="w-12 h-12 bg-terracotta-100 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-terracotta-200/30 shadow-lg">
+              <img 
+                src="/images/icon-fa.webp" 
+                alt="" 
+                className="w-16 h-16 mb-4 opacity-90"
+              />
               <h3 className="font-serif text-xl text-gray-900 mb-3">
                 Como a inflamação silenciosa interfere nos resultados estéticos
               </h3>
             </div>
 
-            <div className="bg-cream-50 p-8 rounded-2xl">
-              <div className="w-12 h-12 bg-terracotta-100 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-terracotta-200/30 shadow-lg">
+              <img 
+                src="/images/icon-fa.webp" 
+                alt="" 
+                className="w-16 h-16 mb-4 opacity-90"
+              />
               <h3 className="font-serif text-xl text-gray-900 mb-3">
                 Por que um corpo inflamado não responde bem a estímulos
               </h3>
             </div>
 
-            <div className="bg-cream-50 p-8 rounded-2xl">
-              <div className="w-12 h-12 bg-terracotta-100 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-terracotta-200/30 shadow-lg">
+              <img 
+                src="/images/icon-fa.webp" 
+                alt="" 
+                className="w-16 h-16 mb-4 opacity-90"
+              />
               <h3 className="font-serif text-xl text-gray-900 mb-3">
                 A diferença prática entre tratar sintomas e cuidar da causa
               </h3>
             </div>
 
-            <div className="bg-cream-50 p-8 rounded-2xl">
-              <div className="w-12 h-12 bg-terracotta-100 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-terracotta-200/30 shadow-lg">
+              <img 
+                src="/images/icon-fa.webp" 
+                alt="" 
+                className="w-16 h-16 mb-4 opacity-90"
+              />
               <h3 className="font-serif text-xl text-gray-900 mb-3">
                 Por que avaliação não é detalhe, é fundamento
               </h3>
             </div>
 
-            <div className="bg-cream-50 p-8 rounded-2xl">
-              <div className="w-12 h-12 bg-terracotta-100 rounded-full flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-terracotta-200/30 shadow-lg">
+              <img 
+                src="/images/icon-fa.webp" 
+                alt="" 
+                className="w-16 h-16 mb-4 opacity-90"
+              />
               <h3 className="font-serif text-xl text-gray-900 mb-3">
                 Como reconhecer quando insistir começa a custar caro
               </h3>
             </div>
           </div>
         </div>
+        </div>
       </section>
 
-      {/* Para quem é + O que não é */}
+      {/* Para quem é este conteúdo */}
       <section className="py-20 bg-cream-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
@@ -278,26 +289,28 @@ export default function Ebook() {
             <div className="order-2 md:order-1">
               <div className="relative">
                 <img 
-                  src="/images/ebook-wellness.jpg" 
+                  src="/images/ebook-wellness.webp" 
                   alt="Cuidado e bem-estar" 
                   className="rounded-2xl shadow-2xl"
                 />
               </div>
               
               <div className="mt-8">
-                <h2 className="font-serif text-3xl text-gray-900 mb-4">
+                <h2 className="font-serif text-3xl text-gray-900 mb-6">
                   Sobre a autora
                 </h2>
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-start gap-6 mb-6">
                   <img 
-                    src="/images/flavia-profile-new.png" 
+                    src="/images/flavia-profile-new.webp" 
                     alt="Dra. Flávia Abreu" 
-                    className="w-16 h-16 rounded-full object-cover border-2 border-terracotta-200"
+                    className="w-32 h-32 rounded-full object-cover border-4 border-gold-400 shadow-lg flex-shrink-0"
                   />
-                  <div>
-                    <p className="font-script text-2xl text-terracotta-600">
-                      Flávia Abreu
-                    </p>
+                  <div className="flex flex-col justify-center">
+                    <img 
+                      src="/images/logo-secundario.webp" 
+                      alt="Dra. Flávia Abreu" 
+                      className="h-16 w-auto mb-2"
+                    />
                     <p className="font-sans text-sm text-gray-600">
                       Fisioterapeuta Dermatofuncional
                     </p>
@@ -399,16 +412,18 @@ export default function Ebook() {
       </section>
 
       {/* Footer Simples */}
-      <footer className="bg-cream-900 text-cream-100 py-8">
+      <footer className="bg-cream-900 text-cream-100 py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-script text-2xl text-terracotta-300 mb-2">
-            Dra. Flávia Abreu
-          </p>
-          <p className="font-sans text-sm">
+          <img 
+            src="/images/logo-secundario.webp" 
+            alt="Dra. Flávia Abreu" 
+            className="h-20 w-auto mx-auto mb-4 opacity-90"
+          />
+          <p className="font-sans text-sm mb-2">
             Saúde Estética e Integrativa
           </p>
           <p className="font-sans text-xs mt-4 text-cream-300">
-            © {new Date().getFullYear()} Todos os direitos reservados
+            © {new Date().getFullYear()} Dra. Flávia Abreu - Todos os direitos reservados
           </p>
         </div>
       </footer>
