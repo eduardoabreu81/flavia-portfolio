@@ -151,9 +151,9 @@ export default function Ebook() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gold-300/40 shadow-xl hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-md">
-                  <span className="text-white text-xl font-bold">1</span>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-gold-400 shadow-[0_8px_30px_rgb(218,165,32,0.3)] hover:shadow-[0_12px_40px_rgb(218,165,32,0.5)] transition-all duration-300">
+                <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-lg border-2 border-gold-300">
+                  <span className="text-gray-900 text-2xl font-bold">1</span>
                 </div>
                 <h3 className="font-serif text-2xl text-gray-900 mb-3 leading-tight">
                   Por que dor e inchaço não surgem do nada
@@ -163,9 +163,9 @@ export default function Ebook() {
                 </p>
               </div>
 
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gold-300/40 shadow-xl hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-md">
-                  <span className="text-white text-xl font-bold">2</span>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-gold-400 shadow-[0_8px_30px_rgb(218,165,32,0.3)] hover:shadow-[0_12px_40px_rgb(218,165,32,0.5)] transition-all duration-300">
+                <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-lg border-2 border-gold-300">
+                  <span className="text-gray-900 text-2xl font-bold">2</span>
                 </div>
                 <h3 className="font-serif text-2xl text-gray-900 mb-3 leading-tight">
                   Como a inflamação silenciosa sabota resultados estéticos
@@ -175,9 +175,9 @@ export default function Ebook() {
                 </p>
               </div>
 
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gold-300/40 shadow-xl hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-md">
-                  <span className="text-white text-xl font-bold">3</span>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-gold-400 shadow-[0_8px_30px_rgb(218,165,32,0.3)] hover:shadow-[0_12px_40px_rgb(218,165,32,0.5)] transition-all duration-300">
+                <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-lg border-2 border-gold-300">
+                  <span className="text-gray-900 text-2xl font-bold">3</span>
                 </div>
                 <h3 className="font-serif text-2xl text-gray-900 mb-3 leading-tight">
                   Por que um corpo inflamado não responde bem a estímulos
@@ -187,9 +187,9 @@ export default function Ebook() {
                 </p>
               </div>
 
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gold-300/40 shadow-xl hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-md">
-                  <span className="text-white text-xl font-bold">4</span>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-gold-400 shadow-[0_8px_30px_rgb(218,165,32,0.3)] hover:shadow-[0_12px_40px_rgb(218,165,32,0.5)] transition-all duration-300">
+                <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-lg border-2 border-gold-300">
+                  <span className="text-gray-900 text-2xl font-bold">4</span>
                 </div>
                 <h3 className="font-serif text-2xl text-gray-900 mb-3 leading-tight">
                   A diferença prática entre tratar sintomas e cuidar da causa
@@ -199,9 +199,9 @@ export default function Ebook() {
                 </p>
               </div>
 
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gold-300/40 shadow-xl hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-md">
-                  <span className="text-white text-xl font-bold">5</span>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-gold-400 shadow-[0_8px_30px_rgb(218,165,32,0.3)] hover:shadow-[0_12px_40px_rgb(218,165,32,0.5)] transition-all duration-300">
+                <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-lg border-2 border-gold-300">
+                  <span className="text-gray-900 text-2xl font-bold">5</span>
                 </div>
                 <h3 className="font-serif text-2xl text-gray-900 mb-3 leading-tight">
                   Por que avaliação não é detalhe, é fundamento
@@ -211,9 +211,9 @@ export default function Ebook() {
                 </p>
               </div>
 
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gold-300/40 shadow-xl hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-md">
-                  <span className="text-white text-xl font-bold">6</span>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-gold-400 shadow-[0_8px_30px_rgb(218,165,32,0.3)] hover:shadow-[0_12px_40px_rgb(218,165,32,0.5)] transition-all duration-300">
+                <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-lg border-2 border-gold-300">
+                  <span className="text-gray-900 text-2xl font-bold">6</span>
                 </div>
                 <h3 className="font-serif text-2xl text-gray-900 mb-3 leading-tight">
                   Como reconhecer quando insistir começa a custar caro
@@ -293,11 +293,11 @@ export default function Ebook() {
           <div className="grid md:grid-cols-2 gap-16 items-start">
             {/* Imagem do bem-estar */}
             <div className="order-2 md:order-1">
-              <div className="relative">
+              <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
                 <img 
                   src="/images/ebook-wellness.webp" 
                   alt="Cuidado e bem-estar" 
-                  className="w-full h-auto rounded-2xl shadow-2xl"
+                  className="w-full h-full object-cover rounded-2xl shadow-2xl"
                 />
               </div>
             </div>
@@ -393,7 +393,7 @@ export default function Ebook() {
             </h2>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-cream-50 p-8 rounded-2xl shadow-lg">
               <img 
-                src="/images/flavia-profile.webp" 
+                src="/images/flavia-profile-new.webp" 
                 alt="Dra. Flávia Abreu" 
                 className="w-40 h-40 rounded-full object-cover border-4 border-gold-400 shadow-lg flex-shrink-0"
               />
