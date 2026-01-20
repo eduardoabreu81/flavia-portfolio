@@ -14,6 +14,7 @@ import About from "./pages/About";
 import Approach from "./pages/Approach";
 import Treatments from "./pages/Treatments";
 import Contact from "./pages/Contact";
+import Ebook from "./pages/Ebook";
 
 function Router() {
   return (
@@ -26,6 +27,7 @@ function Router() {
         <Route path="/abordagem" component={Approach} />
         <Route path="/tratamentos" component={Treatments} />
         <Route path="/contato" component={Contact} />
+        <Route path="/ebook" component={Ebook} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

@@ -5,20 +5,28 @@ import { Phone, Instagram, MapPin, Clock, Mail } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { SEO } from "@/components/SEO";
+import { saveContactMessage } from "@/lib/firebase";
 
 export default function Contact() {
   const { register, handleSubmit, reset } = useForm();
 
-  const onSubmit = (data: any) => {
-    // Simulate form submission
-    console.log(data);
-    toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-    reset();
-    
-    // Construct WhatsApp message
-    const message = `Olá, meu nome é ${data.name}. Gostaria de mais informações sobre os tratamentos. Mensagem: ${data.message}`;
-    const whatsappUrl = `https://wa.me/5511993905711?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+  const onSubmit = async (data: any) => {
+    try {
+      // Salvar mensagem no Firebase
+      await saveContactMessage(data);
+      
+      console.log("Mensagem salva no Firebase:", data);
+      toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+      reset();
+      
+      // Construct WhatsApp message
+      const message = `Olá, meu nome é ${data.name}. Gostaria de mais informações sobre os tratamentos. Mensagem: ${data.message}`;
+      const whatsappUrl = `https://wa.me/5511993905711?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    } catch (error) {
+      console.error("Erro ao enviar mensagem:", error);
+      toast.error("Ops! Algo deu errado. Tente novamente.");
+    }
   };
 
   return (
