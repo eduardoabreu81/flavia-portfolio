@@ -38,6 +38,8 @@ FONT_GREAT_VIBES = os.path.join(FONT_DIR, 'GreatVibes-Regular.ttf')
 FONT_PLAYFAIR = os.path.join(FONT_DIR, 'PlayfairDisplay-Regular.ttf')
 FONT_LATO = os.path.join(FONT_DIR, 'Lato-Regular.ttf')
 FONT_MONTSERRAT = os.path.join(FONT_DIR, 'Montserrat-Regular.ttf')
+FONT_MONTSERRAT_SEMIBOLD = os.path.join(FONT_DIR, 'Montserrat-SemiBold.ttf')
+FONT_MONTSERRAT_BOLD = os.path.join(FONT_DIR, 'Montserrat-Bold.ttf')
 FONT_MONTSERRAT_BLACK = os.path.join(FONT_DIR, 'Montserrat-Black.ttf')
 
 # Dados de contato
@@ -85,9 +87,12 @@ def register_fonts():
         pdfmetrics.registerFont(TTFont('Playfair', FONT_PLAYFAIR))
         pdfmetrics.registerFont(TTFont('Lato', FONT_LATO))
         pdfmetrics.registerFont(TTFont('Montserrat', FONT_MONTSERRAT))
+        pdfmetrics.registerFont(TTFont('Montserrat-SemiBold', FONT_MONTSERRAT_SEMIBOLD))
+        pdfmetrics.registerFont(TTFont('Montserrat-Bold', FONT_MONTSERRAT_BOLD))
         pdfmetrics.registerFont(TTFont('Montserrat-Black', FONT_MONTSERRAT_BLACK))
         return True
-    except:
+    except Exception as e:
+        print(f'Erro ao registrar fontes: {e}')
         return False
 
 
@@ -210,7 +215,7 @@ def create_page_1_menu(c, use_custom_fonts=True):
     ]
     
     start_y = line_y - 200
-    font_button = 'Montserrat-Black' if use_custom_fonts else 'Helvetica-Bold'
+    font_button = 'Montserrat-SemiBold' if use_custom_fonts else 'Helvetica-Bold'
     
     for i, btn in enumerate(buttons):
         y = start_y - (i * button_spacing)
