@@ -324,7 +324,7 @@ def create_page_2_tratamentos(c, use_custom_fonts=True):
     c.setFillColor(COLOR_GOLD)
     c.roundRect(button_x, button_y, button_width, button_height, 15, fill=True, stroke=False)
     
-    font_btn = 'Montserrat' if use_custom_fonts else 'Helvetica-Bold'
+    font_btn = 'Montserrat-SemiBold' if use_custom_fonts else 'Helvetica-Bold'
     c.setFillColor(COLOR_WHITE)
     c.setFont(font_btn, 32)
     btn_text = 'VOLTAR AO MENU'
