@@ -61,7 +61,9 @@ export default function Ebook() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{
+      background: 'linear-gradient(135deg, #F9F7F2 0%, #F5F1E8 25%, #F9F7F2 50%, #F2EDE3 75%, #F9F7F2 100%)'
+    }}>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center">
         {/* Background Image with Overlay */}
@@ -82,10 +84,12 @@ export default function Ebook() {
               Por que seu corpo não responde aos tratamentos?
             </h1>
 
-            {/* Subtítulo */}
-            <p className="font-sans text-xl md:text-2xl text-cream-100 leading-relaxed mb-8">
-              O que ninguém explica sobre dor, inflamação e estética quando o cuidado não começa pela função.
-            </p>
+            {/* Subtítulo com fundo semi-transparente */}
+            <div className="bg-black/40 backdrop-blur-sm px-6 py-4 rounded-lg mb-8 inline-block">
+              <p className="font-sans text-xl md:text-2xl text-white leading-relaxed">
+                O que ninguém explica sobre dor, inflamação e estética quando o cuidado não começa pela função.
+              </p>
+            </div>
 
             {/* CTA Button */}
             <a 
@@ -98,144 +102,146 @@ export default function Ebook() {
         </div>
       </section>
 
-      {/* Introdução */}
-      <section className="py-20 bg-cream-50">
+      {/* Introdução - Copy Melhorado */}
+      <section className="py-20 bg-gradient-to-b from-cream-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
-            <p className="font-sans text-xl text-gray-700 leading-relaxed mb-6">
-              Você já tentou procedimentos, protocolos e tratamentos diferentes.
+            <p className="font-sans text-2xl text-gray-800 leading-relaxed mb-8 font-light">
+              Você já tentou procedimentos diferentes, seguiu protocolos, investiu tempo e dinheiro.
             </p>
-            <p className="font-sans text-xl text-gray-700 leading-relaxed mb-6">
-              Seguiu orientações. Investiu tempo e dinheiro.
+            <p className="font-sans text-2xl text-gray-800 leading-relaxed mb-8 font-light">
+              Mas os resultados não se sustentam. E a frustração se acumula.
             </p>
-            <p className="font-sans text-xl text-gray-700 leading-relaxed mb-6">
-              Mesmo assim, os resultados não se sustentam.
-            </p>
-            <p className="font-sans text-xl text-gray-800 font-medium leading-relaxed mb-6">
+            <p className="font-sans text-2xl text-gray-900 font-medium leading-relaxed mb-10">
               Este eBook não foi criado para vender soluções rápidas.<br />
-              Ele foi criado para trazer clareza.
+              Ele foi criado para trazer <span className="text-terracotta-600">clareza</span>.
             </p>
-            <ul className="space-y-3 font-sans text-lg text-gray-700 list-none pl-0">
-              <li className="flex items-start">
-                <span className="text-terracotta-600 mr-3">•</span>
-                <span>Clareza sobre por que tantos tratamentos falham.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-terracotta-600 mr-3">•</span>
-                <span>Clareza sobre o papel da inflamação no corpo.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-terracotta-600 mr-3">•</span>
-                <span>Clareza sobre a diferença entre tratar e cuidar.</span>
-              </li>
-            </ul>
+            
+            <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border-l-4 border-terracotta-600 shadow-lg">
+              <ul className="space-y-5 font-sans text-xl text-gray-800 list-none pl-0">
+                <li className="flex items-start">
+                  <span className="text-terracotta-600 mr-4 text-2xl font-bold">•</span>
+                  <span><strong>Clareza</strong> sobre por que tantos tratamentos falham.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-terracotta-600 mr-4 text-2xl font-bold">•</span>
+                  <span><strong>Clareza</strong> sobre o papel da inflamação crônica no corpo.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-terracotta-600 mr-4 text-2xl font-bold">•</span>
+                  <span><strong>Clareza</strong> sobre a diferença entre tratar sintomas e cuidar da causa.</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* O que você vai aprender */}
-      <section className="py-20 bg-white relative overflow-hidden">
-        {/* Background de mármore sutil */}
-        <div 
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: 'url(/images/marble-background.webp)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        />
+      <section className="py-20 relative overflow-hidden" style={{
+        background: 'linear-gradient(to bottom, #ffffff 0%, #F9F7F2 50%, #ffffff 100%)'
+      }}>
         <div className="relative z-10">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl md:text-5xl text-gray-900 text-center mb-16">
-            O que você vai aprender neste eBook gratuito
-          </h2>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="font-serif text-4xl md:text-5xl text-gray-900 text-center mb-4">
+              O que você vai aprender
+            </h2>
+            <p className="font-sans text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">
+              Seis capítulos que conectam função, inflamação e resultados reais.
+            </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-terracotta-200/30 shadow-lg">
-              <img 
-                src="/images/icon-fa.webp" 
-                alt="" 
-                className="w-16 h-16 mb-4 opacity-90"
-              />
-              <h3 className="font-serif text-xl text-gray-900 mb-3">
-                Por que dor e inchaço não surgem do nada
-              </h3>
-            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gold-300/40 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-md">
+                  <span className="text-white text-xl font-bold">1</span>
+                </div>
+                <h3 className="font-serif text-2xl text-gray-900 mb-3 leading-tight">
+                  Por que dor e inchaço não surgem do nada
+                </h3>
+                <p className="font-sans text-gray-600 leading-relaxed">
+                  Entenda os sinais que o corpo envia antes de manifestar sintomas visíveis.
+                </p>
+              </div>
 
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-terracotta-200/30 shadow-lg">
-              <img 
-                src="/images/icon-fa.webp" 
-                alt="" 
-                className="w-16 h-16 mb-4 opacity-90"
-              />
-              <h3 className="font-serif text-xl text-gray-900 mb-3">
-                Como a inflamação silenciosa interfere nos resultados estéticos
-              </h3>
-            </div>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gold-300/40 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-md">
+                  <span className="text-white text-xl font-bold">2</span>
+                </div>
+                <h3 className="font-serif text-2xl text-gray-900 mb-3 leading-tight">
+                  Como a inflamação silenciosa sabota resultados estéticos
+                </h3>
+                <p className="font-sans text-gray-600 leading-relaxed">
+                  Descubra por que procedimentos não funcionam em corpos inflamados.
+                </p>
+              </div>
 
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-terracotta-200/30 shadow-lg">
-              <img 
-                src="/images/icon-fa.webp" 
-                alt="" 
-                className="w-16 h-16 mb-4 opacity-90"
-              />
-              <h3 className="font-serif text-xl text-gray-900 mb-3">
-                Por que um corpo inflamado não responde bem a estímulos
-              </h3>
-            </div>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gold-300/40 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-md">
+                  <span className="text-white text-xl font-bold">3</span>
+                </div>
+                <h3 className="font-serif text-2xl text-gray-900 mb-3 leading-tight">
+                  Por que um corpo inflamado não responde bem a estímulos
+                </h3>
+                <p className="font-sans text-gray-600 leading-relaxed">
+                  A relação entre sistema nervoso, estresse e resposta tecidual.
+                </p>
+              </div>
 
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-terracotta-200/30 shadow-lg">
-              <img 
-                src="/images/icon-fa.webp" 
-                alt="" 
-                className="w-16 h-16 mb-4 opacity-90"
-              />
-              <h3 className="font-serif text-xl text-gray-900 mb-3">
-                A diferença prática entre tratar sintomas e cuidar da causa
-              </h3>
-            </div>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gold-300/40 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-md">
+                  <span className="text-white text-xl font-bold">4</span>
+                </div>
+                <h3 className="font-serif text-2xl text-gray-900 mb-3 leading-tight">
+                  A diferença prática entre tratar sintomas e cuidar da causa
+                </h3>
+                <p className="font-sans text-gray-600 leading-relaxed">
+                  Como mudar a lógica de intervenção para obter resultados sustentáveis.
+                </p>
+              </div>
 
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-terracotta-200/30 shadow-lg">
-              <img 
-                src="/images/icon-fa.webp" 
-                alt="" 
-                className="w-16 h-16 mb-4 opacity-90"
-              />
-              <h3 className="font-serif text-xl text-gray-900 mb-3">
-                Por que avaliação não é detalhe, é fundamento
-              </h3>
-            </div>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gold-300/40 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-md">
+                  <span className="text-white text-xl font-bold">5</span>
+                </div>
+                <h3 className="font-serif text-2xl text-gray-900 mb-3 leading-tight">
+                  Por que avaliação não é detalhe, é fundamento
+                </h3>
+                <p className="font-sans text-gray-600 leading-relaxed">
+                  O que uma avaliação funcional revela sobre seu corpo e seus limites.
+                </p>
+              </div>
 
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-terracotta-200/30 shadow-lg">
-              <img 
-                src="/images/icon-fa.webp" 
-                alt="" 
-                className="w-16 h-16 mb-4 opacity-90"
-              />
-              <h3 className="font-serif text-xl text-gray-900 mb-3">
-                Como reconhecer quando insistir começa a custar caro
-              </h3>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gold-300/40 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mb-6 shadow-md">
+                  <span className="text-white text-xl font-bold">6</span>
+                </div>
+                <h3 className="font-serif text-2xl text-gray-900 mb-3 leading-tight">
+                  Como reconhecer quando insistir começa a custar caro
+                </h3>
+                <p className="font-sans text-gray-600 leading-relaxed">
+                  Sinais de que é hora de mudar de estratégia, não de intensidade.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
 
       {/* Para quem é este conteúdo */}
-      <section className="py-20 bg-cream-50">
+      <section className="py-20 bg-gradient-to-b from-white to-cream-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Para quem é */}
-            <div>
+            <div className="bg-white/80 backdrop-blur-sm p-10 rounded-2xl shadow-lg border border-terracotta-200/30">
               <h2 className="font-serif text-3xl text-gray-900 mb-8">
                 Para quem este conteúdo é
               </h2>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 {[
                   'Mulheres que sentem que o corpo não responde mais como antes',
-                  'Quem já fez tratamentos estéticos sem resultados duradouros',
-                  'Quem convive com dor, inchaço ou desconforto recorrente',
-                  'Quem busca autocuidado com consciência, não por urgência'
+                  'Quem já investiu em tratamentos estéticos sem resultados duradouros',
+                  'Quem convive com dor crônica, inchaço ou desconforto recorrente',
+                  'Quem busca autocuidado consciente, não por urgência ou desespero'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start font-sans text-lg text-gray-700">
                     <svg className="w-6 h-6 text-terracotta-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -248,16 +254,16 @@ export default function Ebook() {
             </div>
 
             {/* O que não é */}
-            <div>
+            <div className="bg-white/80 backdrop-blur-sm p-10 rounded-2xl shadow-lg border border-gray-200">
               <h2 className="font-serif text-3xl text-gray-900 mb-8">
                 O que este eBook não é
               </h2>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 {[
-                  'Não é um manual de execução',
-                  'Não é um protocolo pronto',
-                  'Não promete resultados rápidos',
-                  'Não substitui avaliação profissional'
+                  'Não é um manual de execução técnica',
+                  'Não é um protocolo pronto para aplicar sozinha',
+                  'Não promete resultados rápidos ou milagrosos',
+                  'Não substitui avaliação profissional individualizada'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start font-sans text-lg text-gray-700">
                     <svg className="w-6 h-6 text-gray-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -268,12 +274,12 @@ export default function Ebook() {
                 ))}
               </ul>
 
-              <div className="mt-8 p-6 bg-white rounded-xl border-l-4 border-terracotta-600">
-                <p className="font-serif text-xl text-gray-900 mb-2">
+              <div className="mt-8 p-6 bg-gradient-to-r from-terracotta-50 to-gold-50 rounded-xl border-l-4 border-terracotta-600">
+                <p className="font-serif text-xl text-gray-900 mb-2 font-medium">
                   O que ele oferece
                 </p>
-                <p className="font-sans text-lg text-gray-700">
-                  Perspectiva. Consciência. Um novo jeito de olhar para o próprio corpo.
+                <p className="font-sans text-lg text-gray-700 leading-relaxed">
+                  Perspectiva. Consciência. Um novo jeito de olhar para o próprio corpo — e para as escolhas que você faz.
                 </p>
               </div>
             </div>
@@ -284,50 +290,51 @@ export default function Ebook() {
       {/* Sobre a Autora + Formulário */}
       <section id="formulario" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
             {/* Sobre a Autora */}
             <div className="order-2 md:order-1">
-              <div className="relative">
+              <div className="relative mb-8">
                 <img 
                   src="/images/ebook-wellness.webp" 
                   alt="Cuidado e bem-estar" 
-                  className="rounded-2xl shadow-2xl"
+                  className="w-full h-auto rounded-2xl shadow-2xl object-cover"
                 />
               </div>
               
-              <div className="mt-8">
+              <div>
                 <h2 className="font-serif text-3xl text-gray-900 mb-6">
                   Sobre a autora
                 </h2>
                 <div className="flex items-start gap-6 mb-6">
                   <img 
-                    src="/images/flavia-profile-new.webp" 
+                    src="/images/flavia-profile.webp" 
                     alt="Dra. Flávia Abreu" 
                     className="w-32 h-32 rounded-full object-cover border-4 border-gold-400 shadow-lg flex-shrink-0"
                   />
                   <div className="flex flex-col justify-center">
-                    <img 
-                      src="/images/logo-secundario.webp" 
-                      alt="Dra. Flávia Abreu" 
-                      className="h-16 w-auto mb-2"
-                    />
-                    <p className="font-sans text-sm text-gray-600">
+                    <h3 className="font-serif text-3xl text-gray-900 mb-1">
+                      Dra. Flávia Abreu
+                    </h3>
+                    <p className="font-sans text-base text-gray-600">
                       Fisioterapeuta Dermatofuncional
                     </p>
                   </div>
                 </div>
                 <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
-                  Seu trabalho é baseado em escuta, avaliação e respeito ao corpo.
+                  Meu trabalho é baseado em escuta, avaliação funcional e respeito ao tempo do corpo.
                 </p>
-                <p className="font-sans text-lg text-gray-700 leading-relaxed">
-                  Sem atalhos. Sem promessas irreais. Com processo e coerência.
+                <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
+                  Sem atalhos. Sem promessas irreais. Com processo, coerência e ciência.
+                </p>
+                <p className="font-sans text-lg text-gray-800 leading-relaxed font-medium">
+                  Porque resultado sustentável não vem de urgência — vem de compreensão.
                 </p>
               </div>
             </div>
 
             {/* Formulário */}
-            <div className="order-1 md:order-2">
-              <div className="bg-cream-50 p-8 md:p-10 rounded-2xl shadow-xl">
+            <div className="order-1 md:order-2 md:sticky md:top-8">
+              <div className="bg-gradient-to-br from-cream-50 to-gold-50/30 p-8 md:p-10 rounded-2xl shadow-2xl border border-gold-200/50">
                 <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mb-4">
                   Baixe o eBook gratuito
                 </h2>
@@ -402,7 +409,7 @@ export default function Ebook() {
                   </button>
 
                   <p className="text-xs text-gray-500 text-center leading-relaxed">
-                    Este material é informativo e não substitui avaliação profissional individualizada.
+                    Este material é informativo e educacional. Não substitui avaliação profissional individualizada.
                   </p>
                 </form>
               </div>
@@ -414,11 +421,9 @@ export default function Ebook() {
       {/* Footer Simples */}
       <footer className="bg-cream-900 text-cream-100 py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <img 
-            src="/images/logo-secundario.webp" 
-            alt="Dra. Flávia Abreu" 
-            className="h-20 w-auto mx-auto mb-4 opacity-90"
-          />
+          <h3 className="font-serif text-3xl text-cream-100 mb-2">
+            Dra. Flávia Abreu
+          </h3>
           <p className="font-sans text-sm mb-2">
             Saúde Estética e Integrativa
           </p>
