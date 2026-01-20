@@ -290,9 +290,9 @@ export default function Ebook() {
       {/* Sobre a Autora + Formulário */}
       <section id="formulario" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+          <div className="space-y-16">
             {/* Imagem do bem-estar */}
-            <div className="order-2 md:order-1">
+            <div className="w-full max-w-2xl mx-auto">
               <img 
                 src="/images/ebook-wellness.webp" 
                 alt="Cuidado e bem-estar" 
@@ -301,7 +301,7 @@ export default function Ebook() {
             </div>
 
             {/* Formulário */}
-            <div className="order-1 md:order-2">
+            <div className="w-full max-w-2xl mx-auto">
               <div className="bg-gradient-to-br from-cream-50 to-gold-50/30 p-8 md:p-10 rounded-2xl shadow-2xl border border-gold-200/50">
                 <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mb-4">
                   Baixe o eBook gratuito
