@@ -293,13 +293,11 @@ export default function Ebook() {
           <div className="grid md:grid-cols-2 gap-16 items-start">
             {/* Imagem do bem-estar */}
             <div className="order-2 md:order-1">
-              <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
-                <img 
-                  src="/images/ebook-wellness.webp" 
-                  alt="Cuidado e bem-estar" 
-                  className="w-full h-full object-cover rounded-2xl shadow-2xl"
-                />
-              </div>
+              <img 
+                src="/images/ebook-wellness.webp" 
+                alt="Cuidado e bem-estar" 
+                className="w-full h-auto rounded-2xl shadow-2xl"
+              />
             </div>
 
             {/* Formulário */}
