@@ -291,49 +291,19 @@ export default function Ebook() {
       <section id="formulario" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-start">
-            {/* Sobre a Autora */}
+            {/* Imagem do bem-estar */}
             <div className="order-2 md:order-1">
-              <div className="relative mb-8">
+              <div className="relative">
                 <img 
                   src="/images/ebook-wellness.webp" 
                   alt="Cuidado e bem-estar" 
-                  className="w-full h-auto rounded-2xl shadow-2xl object-cover"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
                 />
-              </div>
-              
-              <div>
-                <h2 className="font-serif text-3xl text-gray-900 mb-6">
-                  Sobre a autora
-                </h2>
-                <div className="flex items-start gap-6 mb-6">
-                  <img 
-                    src="/images/flavia-profile.webp" 
-                    alt="Dra. Flávia Abreu" 
-                    className="w-32 h-32 rounded-full object-cover border-4 border-gold-400 shadow-lg flex-shrink-0"
-                  />
-                  <div className="flex flex-col justify-center">
-                    <h3 className="font-serif text-3xl text-gray-900 mb-1">
-                      Dra. Flávia Abreu
-                    </h3>
-                    <p className="font-sans text-base text-gray-600">
-                      Fisioterapeuta Dermatofuncional
-                    </p>
-                  </div>
-                </div>
-                <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
-                  Meu trabalho é baseado em escuta, avaliação funcional e respeito ao tempo do corpo.
-                </p>
-                <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
-                  Sem atalhos. Sem promessas irreais. Com processo, coerência e ciência.
-                </p>
-                <p className="font-sans text-lg text-gray-800 leading-relaxed font-medium">
-                  Porque resultado sustentável não vem de urgência — vem de compreensão.
-                </p>
               </div>
             </div>
 
             {/* Formulário */}
-            <div className="order-1 md:order-2 md:sticky md:top-8">
+            <div className="order-1 md:order-2">
               <div className="bg-gradient-to-br from-cream-50 to-gold-50/30 p-8 md:p-10 rounded-2xl shadow-2xl border border-gold-200/50">
                 <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mb-4">
                   Baixe o eBook gratuito
@@ -393,7 +363,7 @@ export default function Ebook() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-terracotta-600 hover:bg-terracotta-700 text-white font-medium py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-rose-400 hover:bg-rose-500 text-cream-900 font-medium py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? (
                       <span className="flex items-center justify-center gap-2">
@@ -415,15 +385,45 @@ export default function Ebook() {
               </div>
             </div>
           </div>
+
+          {/* Info da Autora (abaixo do formulário) */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <h2 className="font-serif text-3xl text-gray-900 mb-8 text-center">
+              Sobre a autora
+            </h2>
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-cream-50 p-8 rounded-2xl shadow-lg">
+              <img 
+                src="/images/flavia-profile.webp" 
+                alt="Dra. Flávia Abreu" 
+                className="w-40 h-40 rounded-full object-cover border-4 border-gold-400 shadow-lg flex-shrink-0"
+              />
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-4xl md:text-5xl text-rose-600 mb-2" style={{ fontFamily: 'Great Vibes, cursive' }}>
+                  Dra. Flávia Abreu
+                </h3>
+                <p className="font-sans text-base text-gray-600 mb-4">
+                  Fisioterapeuta Dermatofuncional
+                </p>
+                <p className="font-sans text-lg text-gray-700 leading-relaxed mb-4">
+                  Meu trabalho é baseado em escuta, avaliação funcional e respeito ao tempo do corpo.
+                </p>
+                <p className="font-sans text-lg text-gray-700 leading-relaxed">
+                  Sem atalhos. Sem promessas irreais. Com processo, coerência e ciência.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Footer Simples */}
       <footer className="bg-cream-900 text-cream-100 py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="font-serif text-3xl text-cream-100 mb-2">
-            Dra. Flávia Abreu
-          </h3>
+          <img 
+            src="/images/logo-secundario.webp" 
+            alt="Dra. Flávia Abreu" 
+            className="h-20 w-auto mx-auto mb-4 opacity-90"
+          />
           <p className="font-sans text-sm mb-2">
             Saúde Estética e Integrativa
           </p>

@@ -42,7 +42,7 @@ export default function AdminDashboard() {
     });
 
     return () => unsubscribe();
-  }, [navigate]);
+  }, [setLocation]);
 
   const loadData = async () => {
     setLoadingData(true);
