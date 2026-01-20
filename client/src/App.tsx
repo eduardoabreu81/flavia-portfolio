@@ -15,22 +15,35 @@ import Approach from "./pages/Approach";
 import Treatments from "./pages/Treatments";
 import Contact from "./pages/Contact";
 import Ebook from "./pages/Ebook";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function Router() {
   return (
-    <Layout>
-      <ScrollToTop />
-      <StructuredData />
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/quem-sou" component={About} />
-        <Route path="/abordagem" component={Approach} />
-        <Route path="/tratamentos" component={Treatments} />
-        <Route path="/contato" component={Contact} />
-        <Route path="/ebook" component={Ebook} />
-        <Route component={NotFound} />
-      </Switch>
-    </Layout>
+    <Switch>
+      {/* Rotas independentes (sem Layout) */}
+      <Route path="/ebook" component={Ebook} />
+      <Route path="/admin/login" component={AdminLogin} />
+      <Route path="/admin/dashboard" component={AdminDashboard} />
+      
+      {/* Rotas com Layout */}
+      <Route>
+        {() => (
+          <Layout>
+            <ScrollToTop />
+            <StructuredData />
+            <Switch>
+              <Route path="/" component={Home} />
+              <Route path="/quem-sou" component={About} />
+              <Route path="/abordagem" component={Approach} />
+              <Route path="/tratamentos" component={Treatments} />
+              <Route path="/contato" component={Contact} />
+              <Route component={NotFound} />
+            </Switch>
+          </Layout>
+        )}
+      </Route>
+    </Switch>
   );
 }
 
