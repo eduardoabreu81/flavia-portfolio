@@ -9,7 +9,7 @@ export default function Treatments() {
     {
       title: "Harmonização Corporal",
       icon: Sparkles,
-      desc: "Um conjunto de técnicas que equilibram e valorizam seu corpo. Reduz medidas, define contornos, melhora a pele. Resultados naturais, sem parecer 'feito'. Combinamos tecnologias avançadas com terapias manuais especializadas.",
+      desc: "Um conjunto de técnicas que equilibram e valorizam seu corpo. Reduz medidas, define contornos, melhora a pele. Resultados naturais, sem parecer 'feito'. Combinamos tecnologias avançadas com terapias manuais.",
       target: "Quem quer melhorar a silhueta, reduzir inchaços, definir formas com naturalidade.",
       image: "/images/treatment-harmonization-user.webp"
     },
@@ -58,7 +58,7 @@ export default function Treatments() {
     {
       title: "Pós-Operatórios",
       icon: ShieldCheck,
-      desc: "Acompanhamento especializado para garantir uma recuperação segura, funcional e com menos intercorrências. O cuidado no pós-operatório é essencial para o resultado final.",
+      desc: "Acompanhamento para garantir uma recuperação segura, funcional e com menos intercorrências. O cuidado no pós-operatório é essencial para o resultado final.",
       target: "Quem vai passar ou passou por cirurgias plásticas ou vasculares e precisa de reabilitação adequada.",
       image: "/images/treatment-post-op-gen.webp"
     },

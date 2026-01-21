@@ -16,7 +16,7 @@ export default function Home() {
     {
       image: "/images/banner-pain-relief-gen.webp",
       title: "Dor e Inflamação",
-      subtitle: "Tratamento especializado para alívio da dor e recuperação funcional em Alphaville, Barueri e região."
+      subtitle: "Tratamento para alívio da dor e recuperação funcional em Alphaville, Barueri e região."
     },
     {
       image: "/images/treatment-harmonization-user.webp",
@@ -26,7 +26,7 @@ export default function Home() {
     {
       image: "/images/treatment-lipedema-user.webp",
       title: "Tratamento de Lipedema",
-      subtitle: "Cuidado especializado com manejo do tecido, controle de inflamação e orientação consciente."
+      subtitle: "Cuidado com manejo do tecido, controle de inflamação e orientação consciente."
     }
   ];
 
@@ -46,7 +46,7 @@ export default function Home() {
     <div className="flex flex-col w-full">
       <SEO 
         title="Fisioterapia Integrativa e Estética em Alphaville"
-        description="Dra. Flávia Abreu oferece tratamentos especializados em Lipedema, Pós-Operatório, Dores e Estética Integrativa com atendimento domiciliar em Alphaville e Barueri."
+        description="Dra. Flávia Abreu oferece tratamentos em Lipedema, Pós-Operatório, Dores e Estética Integrativa com atendimento domiciliar em Alphaville e Barueri."
         canonical="/"
       />
 
@@ -189,7 +189,7 @@ export default function Home() {
               },
               { 
                 title: "Lipedema", 
-                desc: "Cuidado especializado com manejo do tecido, controle de inflamação e orientação consciente.", 
+                desc: "Cuidado com manejo do tecido, controle de inflamação e orientação consciente.", 
                 img: "/images/treatment-lipedema-user.webp" 
               },
               { 
@@ -199,7 +199,7 @@ export default function Home() {
               },
               { 
                 title: "Pós-Operatórios", 
-                desc: "Acompanhamento especializado para uma recuperação segura, funcional e com menos intercorrências.", 
+                desc: "Acompanhamento para uma recuperação segura, funcional e com menos intercorrências.", 
                 img: "/images/treatment-post-op-gen.webp" 
               },
               { 

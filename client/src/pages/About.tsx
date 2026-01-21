@@ -10,10 +10,10 @@ export default function About() {
     "Pós-graduação em Ozonioterapia e Terapias Pró-Oxidativas",
     "Pós-graduação em Fisiologia Clínica",
     "Pós-graduação em Acupuntura e Dor (em conclusão)",
-    "Formação especializada em Harmonização Corporal",
-    "Formação especializada em Lipedema",
-    "Formação especializada em Tratamento de Diástase",
-    "Formação especializada em Pós-operatórios",
+    "Formação em Harmonização Corporal",
+    "Formação em Lipedema",
+    "Formação em Tratamento de Diástase",
+    "Formação em Pós-operatórios",
     "Formação em Prescrição em Saúde Integrativa"
   ];
 
@@ -21,7 +21,7 @@ export default function About() {
     <div className="pt-32 pb-20">
       <SEO 
         title="Sobre a Dra. Flávia Abreu"
-        description="Fisioterapeuta especializada em Dermatofuncional, Estética Avançada e Saúde Integrativa. Conheça a trajetória e formação da Dra. Flávia Abreu."
+        description="Fisioterapeuta com formação em Dermatofuncional, Estética Avançada e Saúde Integrativa. Conheça a trajetória e formação da Dra. Flávia Abreu."
         canonical="/sobre"
       />
       <div className="container">
